@@ -33,34 +33,68 @@
 
 				<form id="form">
 					<div class="form-group">
-						<label for="mortgage-amount">Mortgage Amount</label>
-						<input type="number" id="mortgage-amount" class="currency-left" />
+						<label for="mortgage-amount" class="input-heading">
+							Mortgage Amount
+						</label>
+						<div class="group-flex">
+							<label for="mortgage-amount" class="currency">£</label>
+							<input type="number" id="mortgage-amount" required />
+						</div>
+						<p class="error">This field is required</p>
 					</div>
 
 					<div class="form-group">
-						<label for="mortgage-term">Mortgage Term</label>
-						<input type="number" id="mortgage-term" class="currency-right" />
+						<label for="mortgage-term" class="input-heading">
+							Mortgage Term
+						</label>
+						<div class="group-flex">
+							<input type="number" id="mortgage-term" required />
+							<label for="mortgage-term" class="currency">years</label>
+						</div>
+						<p class="error">This field is required</p>
 					</div>
 
 					<div class="form-group">
-						<label for="interest-rate">Interest Rate</label>
-						<input type="number" id="interest-rate" class="currency-right" />
+						<label for="interest-rate" class="input-heading">
+							Interest Rate
+						</label>
+						<div class="group-flex">
+							<input type="number" id="interest-rate" required />
+							<label for="interest-rate" class="currency">%</label>
+						</div>
+						<p class="error">This field is required</p>
 					</div>
 
 					<div class="form-group">
-						<label for="mortgage-type">Mortgage Type</label>
+						<label for="mortgage-type" class="input-heading">
+							Mortgage Type
+						</label>
 						<label for="repayment">
-							<input type="radio" name="mortgage-type" id="repayment" />
+							<input
+								type="radio"
+								name="mortgage-type"
+								id="repayment"
+								required
+							/>
 							Repayment
 						</label>
-						<label for="repayment">
-							<input type="radio" name="mortgage-type" id="interest-only" />
+						<label for="interest-only">
+							<input
+								type="radio"
+								name="mortgage-type"
+								id="interest-only"
+								required
+							/>
 							Interest Only
 						</label>
+						<p class="error">This field is required</p>
 					</div>
 
-					<button type="submit" id="calculate-btn" class="btn">
-						Calculate Repayments
+					<button type="submit" id="calculate-btn">
+						<img
+							src="assets/images/icon-calculator.svg"
+							alt="calculator icon"
+						/>Calculate Repayments
 					</button>
 				</form>
 			</div>
