@@ -1,0 +1,219 @@
+/* variables */
+
+:root {
+	--yellow-500: hsl(61, 70%, 52%);
+	--yellow-300: hsl(61, 74%, 73%);
+	--yellow-100: hsl(62, 72%, 93%);
+
+	--red: hsl(4, 69%, 50%);
+
+	--white: hsl(0, 0%, 100%);
+	--slate-200: hsl(202, 86%, 94%);
+	--slate-300: hsl(203, 41%, 72%);
+	--slate-500: hsl(200, 26%, 54%);
+	--slate-700: hsl(200, 24%, 40%);
+	--slate-900: hsl(202, 55%, 16%);
+
+	--ff: "Plus Jakarta Sans", sans-serif;
+
+	--fw-regular: 500;
+	--fw-bold: 700;
+}
+
+/* reseting */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+}
+
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+	isolation: isolate;
+}
+
+/* styling */
+
+body {
+	font-family: var(--ff);
+	font-size: 1rem;
+	background-color: var(--slate-200);
+}
+
+.calcuator,
+.result {
+	padding: 1.65rem 1.375rem;
+}
+
+.calcuator {
+	background-color: var(--white);
+	color: var(--slate-700);
+}
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0 2rem;
+	flex-wrap: wrap;
+}
+
+h1 {
+	font-size: 1.5rem;
+	font-weight: var(--fw-bold);
+	color: var(--slate-900);
+}
+
+a,
+a:visited {
+	color: var(--slate-700);
+}
+
+form {
+	margin-top: 1.5rem;
+}
+
+.form-group {
+	position: relative;
+	display: grid;
+	gap: 0.75rem;
+	margin-bottom: 1.5rem;
+}
+
+.group-flex {
+	display: flex;
+	align-items: center;
+	border: 1px solid var(--slate-500);
+	border-radius: 0.25rem;
+	overflow: hidden;
+	font-weight: var(--fw-bold);
+	transition: 200ms ease;
+}
+
+.group-flex:hover {
+	border-color: var(--slate-900);
+}
+
+.group-flex:focus-within:not(:focus-visible) {
+	border-color: var(--yellow-500);
+}
+
+.group-flex:focus-within label {
+	background-color: var(--yellow-500);
+	color: var(--slate-900);
+}
+
+input[type="number"],
+label:has(input[type="radio"]) {
+	width: 100%;
+}
+
+label.currency {
+	background-color: var(--slate-200);
+	padding: 0.5rem 1rem;
+}
+
+label:has(input[type="radio"]) {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	padding: 0.5rem 1.25rem;
+	border-radius: 0.25rem;
+	border: 1px solid var(--slate-700);
+	color: var(--slate-900);
+	font-size: 1rem;
+	font-weight: var(--fw-bold);
+	transition: 200ms ease;
+}
+
+label:has(input[type="radio"]:checked) {
+	background-color: var(--yellow-100);
+	border-color: var(--yellow-500);
+}
+
+input[type="number"] {
+	padding: 0.5rem 1rem;
+	border: none;
+	outline: none;
+}
+
+input[type="radio"] {
+	appearance: none;
+	width: 0.5rem;
+	height: 0.5rem;
+	outline: 2px solid var(--slate-700);
+	outline-offset: 0.2rem;
+	border-radius: 50%;
+	transition: 200ms ease;
+}
+
+input[type="radio"]:checked {
+	outline-color: var(--yellow-500);
+	background-color: var(--yellow-500);
+}
+
+p.error {
+	color: var(--red);
+}
+
+#calculate-btn {
+	cursor: pointer;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 1rem 1.25rem;
+	background-color: var(--yellow-500);
+	color: var(--slate-900);
+	font-weight: var(--fw-bold);
+	border-radius: 2rem;
+	border: none;
+	transition: 100ms;
+}
+
+#calculate-btn:hover {
+	background-color: var(--yellow-300);
+}
+
+.result {
+	background-color: var(--slate-900);
+	color: var(--white);
+}
