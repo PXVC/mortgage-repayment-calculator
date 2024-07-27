@@ -12,6 +12,7 @@
 	--slate-300: hsl(203, 41%, 72%);
 	--slate-500: hsl(200, 26%, 54%);
 	--slate-700: hsl(200, 24%, 40%);
+	--slate-800: hsl(204, 52%, 20%);
 	--slate-900: hsl(202, 55%, 16%);
 
 	--ff: "Plus Jakarta Sans", sans-serif;
@@ -214,6 +215,66 @@ p.error {
 }
 
 .result {
-	background-color: var(--slate-900);
+	background-color: var(--slate-800);
 	color: var(--white);
+}
+
+.result__empty {
+	display: grid;
+	/* display: none; */
+	place-items: center;
+}
+
+.result__completed {
+	display: none;
+}
+
+.result__board {
+	background-color: var(--slate-900);
+	border-top: 3px solid var(--yellow-500);
+	border-radius: 0.5rem;
+	padding: 0.5rem 0.85rem;
+	margin-top: 1.5rem;
+	color: var(--slate-300);
+}
+
+.result__board div {
+	padding-block: 0.85rem;
+}
+
+.result__board div p {
+	margin-bottom: 0.5rem;
+}
+
+.top {
+	border-bottom: 1px solid var(--slate-700);
+}
+
+#monthly-repayment {
+	color: var(--yellow-500);
+	font-weight: var(--fw-bold);
+	font-size: 2.2rem;
+}
+
+#pay-over-term {
+	color: var(--white);
+	font-weight: var(--fw-bold);
+	font-size: 1.3rem;
+}
+
+.result__description.-centered {
+	text-align: center;
+}
+
+.result__description h1 {
+	color: var(--white);
+	margin-bottom: 0.85rem;
+}
+
+.result__description p {
+	color: var(--slate-300);
+}
+
+.attribution {
+	display: none;
 }
